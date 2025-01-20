@@ -20,6 +20,7 @@ end
 currentVersion = "6.2"
 
 Holder = Instance.new("Frame")
+local Corner = Instance.new("UICorner")
 Title = Instance.new("TextLabel")
 Dark = Instance.new("Frame")
 Cmdbar = Instance.new("TextBox")
@@ -151,6 +152,7 @@ listlayout = Instance.new("UIListLayout",scroll_3)
 selectChat = Instance.new("TextButton")
 selectJoin = Instance.new("TextButton")
 
+
 function randomString()
 	local length = math.random(10,20)
 	local array = {}
@@ -198,6 +200,8 @@ Holder.Position = UDim2.new(1, -250, 1, -220)
 Holder.Size = UDim2.new(0, 250, 0, 220)
 Holder.ZIndex = 10
 table.insert(shade2,Holder)
+Corner.CornerRadius = UDim.new(0, 15) -- Радиус скругления углов
+Corner.Parent = Holder
 
 Title.Name = "Title"
 Title.Parent = Holder
